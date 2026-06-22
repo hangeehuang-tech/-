@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(248, 246, 246);
+    color: rgb(80, 4, 245);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* 🤖 老師提示的深色/駭客模式樣式 */
+body.dark-mode {
+    background-color: #121212 !important;
+    color:white !important;
+}
+body.dark-mode .navbar {
+    background-color: #1a1a1a;
+}
+body.dark-mode .todo-container {
+    background: white;
+    color: black;
+    box-shadow: 0 4px 15px rgba(0,255,102,0.2);
+}
+body.dark-mode .todo-item {
+    background: #2d2d2d;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+}
+
+/* 導覽列 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgb(86, 240, 191);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-link {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: rgb(8, 0, 255);
+}
+
+.nav-link a:hover {
+    color: white;
+}
+
+.btn-chat {
+    background-color: white;
+    color: rgb(30, 100, 80);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* 互動功能輸入框區塊 */
+.interactive-zone {
+    margin: 20px 0 10px 0;
+}
+
+.theme-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-input-group input {
+    padding: 10px;
+    border-radius: 20px; /* 改為圓角配合整體按鈕風格 */
+    border: 1px solid #ccc;
+    flex: 1;
+    font-size: 14px;
+}
+
+.btn-action {
+    padding: 10px 20px;
+    background-color: #50e0cf;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero 主視覺區塊 */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 10%;
+    max-width: 1200px;  
+    margin: auto;      
+    gap: 60px; 
+    min-height: 60vh;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 520px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color:rgb(73, 243, 189);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+/* 核心整合按鈕組 */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background: #8fe8d3; /* 亮眼變色鈕顏色 */
+    color: black;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+    background: #8fe8d3; /* 精美音樂鈕顏色 */
+    color: black;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px); /* 微小懸浮特效 */
+}
+
+.hero-image img {
+    width: 500px;   
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* 📝 To-Do List 區塊樣式 */
+.todo-section {
+    padding: 40px 10%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.todo-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.todo-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.todo-input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.todo-input-section input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#todo-input {
+    flex: 2;
+    min-width: 200px;
+}
+
+#todo-add-btn {
+    background-color: #8fe8d3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.todo-item {
+    padding: 12px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    color: #aaa !important;
+}
+
+.time-span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 響應式 RWD 斷點 */
+@media screen and (max-width: 800px) {
+    .nav-link {
+        display: none;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+    .hero-buttons, .theme-input-group {
+        justify-content: center;
+    }
+    .hero-content {
+        margin-bottom: 40px;
+    }
+    .todo-input-section {
+        flex-direction: column;
+    }
+}

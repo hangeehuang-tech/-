@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>響應式網頁設計佈局練習</title>
+    <link rel="stylesheet" href="p1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo" id="main-logo">11152237 黃玟涵</div>
+        <ul class="nav-link">
+            <li><a href="#">Twicetagram</a></li>
+            <li><a href="#">Eyes wide open</a></li>
+            <li><a href="#">Formula of love</a></li>
+            <li><a href="#">This is for</a></li>
+            <li><a href="#" class="btn-chat">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <audio id="bg-music" src="Heart Shaker.mp3" loop></audio>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title">Welcome to <span class="highlight">twice</span> land!</h1>
+            <p>我的第一個響應式網頁設計</p>
+            
+            <div class="interactive-zone">
+                <div class="theme-input-group">
+                    <input type="text" id="theme-input" placeholder="請先點擊'輸入指令'了解如何下達指令">
+                    <button id="theme-btn" class="btn-action">輸入指令</button>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <button id="change-color-btn" class="btn-primary">姓名變色鈕</button>
+                <button id="music-btn" class="btn-secondary">播放音樂</button>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="twice.jpg" alt="TWICE團體照片">
+        </div>
+    </header>
+
+    <section class="todo-section">
+        <div class="todo-container">
+            <h2>待辦事項排程管理</h2>
+            <div class="todo-input-section">
+                <input type="text" id="todo-input" placeholder="請輸入提醒事項...">
+                <input type="datetime-local" id="todo-time">
+                <button id="todo-add-btn">確定新增</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+    </section>
+
+    <script src="./java.js"></script>
+
+    <script>(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="KEG80KK58XA6g1j0xmooV";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>
